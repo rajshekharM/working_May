@@ -1,0 +1,3 @@
+My configuration :
+
+cmake -G Ninja ../glow \-DGLOW_MODELS_DIR=/home/raj/builds/models \-DGLOW_WITH_OPENCL=OFF \-DCMAKE_BUILD_TYPE=Release \-DBUILD_DOCS=ON \-DLLVM_DIR=/home/raj/glow/llvm_install/lib/cmake/llvm
