@@ -1,9 +1,47 @@
-My configuration :
+STEPS :
+
+$git clone https://github.com/pytorch/glow.git
+$cd glow
+
+$git submodule update --init --recursive
+
+$sudo apt-get install clang clang-6.0 cmake graphviz libpng-dev \
+    libprotobuf-dev llvm-6.0 ninja-build protobuf-compiler wget \
+    opencl-headers libgoogle-glog-dev
+    
+$sudo update-alternatives --install /usr/bin/clang clang \
+    /usr/lib/llvm-6.0/bin/clang 50
+$sudo update-alternatives --install /usr/bin/clang++ clang++ \
+    /usr/lib/llvm-6.0/bin/clang++ 50
+    
+$sudo update-alternatives --config cc
+    # Select the option corresponding to /usr/bin/clang ...
+$sudo update-alternatives --config c++
+    # Select the option corresponding to /usr/bin/clang++ ...
+
+Since llvm6 is installed, we need to build llvm : use command (in glow directory):
+
+$./utils/build_llvm.sh
+
+Now llvm 8.0 is built and stored in : /home/raj/glow/llvm_install/lib/cmake/llvm
+
+Now, In home directory (not in glow directory) make a new build_debug directory :    
+mkdir build_Debug
+cd build_Debug
 
 
+Then make the build file with following configuration : (release mode selected here and LLVM directory created) 
 
 cmake -G Ninja ../glow \-DGLOW_MODELS_DIR=/home/raj/builds/models \-DGLOW_WITH_OPENCL=OFF \-DCMAKE_BUILD_TYPE=Release \-DBUILD_DOCS=ON \-DLLVM_DIR=/home/raj/glow/llvm_install/lib/cmake/llvm
 
-step 2:
+Once this is successful, check all files for errors :
 
 ninja all
+
+Next comes mnist and all datasets :
+
+Download datasets using this (in glow directory):
+python ../glow/utils/download_test_db.py --all
+
+Now run examples :
+
