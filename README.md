@@ -22,13 +22,13 @@ Some points to be careful with while using:
 
 in this case.
 
-* keep in mind the whole path is home/user/tvm... [while if one goes to the file location through linux GUI, it shows home/user/tvm... ] 
+* keep in mind the whole path is home/user/tvm... **[ while if one goes to the file location through linux GUI, it shows home/user/tvm... ]**
 
-__$ export PYTHONPATH=/path/to/vta/python:${PYTHONPATH}
+__$ export PYTHONPATH=/path/to/vta/python:${PYTHONPATH}__
 
 or 
 
-__$ export PYTHONPATH="${PYTHONPATH}:/my/other/path"
+__$ export PYTHONPATH="${PYTHONPATH}:/my/other/path"__
 
 
 __Comment__ : We add/append the new path to vta library in the tvm directory to your previous PYTHONPATH, so that the other python library files are also accesible !
