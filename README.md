@@ -17,7 +17,9 @@ Some points to be careful with while using:
 * path to a python library would have files such as 
 
     *__init__.py*
-    *graph.py  *
+    
+    *graph.py*
+    
     *rpc_client.py*
 
 in this case.
@@ -42,7 +44,7 @@ You should see two paths - one original python libraries and the other tvm/vta p
 
 ## Connect with VTA H/W i.e. Xilinx Pynq FPGA Board
 
-*  We use the host machine (in this case a Linux Virtual Machine running on a Windows machine), to first connect with pynq using ssh
+*  We use the host machine (*in this case a Linux Virtual Machine running on a Windows machine*), to first connect with pynq using ssh
 
 *  Since pynq is on the local network, connected with local machine and not the internet, so we download the tvm directorty in the local machine and the mount the directory from local VM to pynq h/w
 
