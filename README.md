@@ -6,7 +6,7 @@
 ## First Test the VTA Simulator working in the TVM package :
 
 
-The VTA simulator library is built by default with TVM. 
+#### The VTA simulator library is built by default with TVM. 
 
 We have to add the VTA library to our python path to run the VTA examples. The path can look like this :
 If 'tvm' is in home directory :
@@ -40,6 +40,20 @@ You can see the paths later by using :
 __$ echo $PYTHONPATH__
 
 You should see two paths - one original python libraries and the other tvm/vta path
+
+#### Testing VTA simulator
+
+We run the example file (*test_benchmark_topi_conv2d.py*) installed in the VTA python packaghe or the one attached in the directory :
+
+If the file is located in the tvm directory:
+
+__$ python <tvm root>/vta/tests/python/integration/test_benchmark_topi_conv2d.py__
+   
+Once we run this , there are some GOPS that can be seen , when it is running with the host pc hardware : 1.5 ms GOPS for this test
+
+
+
+
 
 
 ## Connect with VTA H/W i.e. Xilinx Pynq FPGA Board
