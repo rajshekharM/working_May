@@ -35,12 +35,12 @@ __Comment__ : We add/append the new path to vta library in the tvm directory to 
 
 You can see the paths later by using :
 
-$ echo $PYTHONPATH
+_$ echo $PYTHONPATH
 
 You should see two paths - one original python libraries and the other tvm/vta path
 
 
-## Connect with VTA H/W i.i. xilinx Pynq FPGA Board
+## Connect with VTA H/W i.e. Xilinx Pynq FPGA Board
 
 *  We use the host machine (in this case a Linux Virtual Machine running on a Windows machine), to first connect with pynq using ssh
 
@@ -58,6 +58,7 @@ You should see two paths - one original python libraries and the other tvm/vta p
 * The host PC (linux VM) tried to communicate with both the ip addresses (using ssh)
 
 The ip address that responeded in this case :- *10.44.4.105*
+
 The other ip address may also generally work (but it dint work in our case which maybe because of the firewalls in the intranet):- *192.168.2.99*
 
 Also, the RPC port address of the device in our case was : *9091*
