@@ -16,7 +16,7 @@ Some points to be careful with while using:
 
 * path to a python library would have files such as 
 
-    *__init__.py*
+    *____init____.py*
     
     *graph.py*
     
