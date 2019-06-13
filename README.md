@@ -16,9 +16,9 @@ Some points to be careful with while using:
 
 * path to a python library would have files such as 
 
- -  __init__.py
- -  graph.py
- -  rpc_client.py
+    __init__.py
+    graph.py  
+    rpc_client.py
 
 in this case.
 
@@ -48,13 +48,16 @@ You should see two paths - one original python libraries and the other tvm/vta p
 
 -- The ip address of pynq was needed to connect with the machine :
 
-**That was done by downloading and using putty on the windows machine
-**Then logging into 'ca09-vta' ssh address
-**Then using if-connfig to see ip addresses of the h/w of ca09-vta
-**There were 2 other addresses on the ethernet that corresponded to ca09-vta:
-**The host PC (linux VM) tried to communicate with both the ip addresses (using ssh)
+* That was done by downloading and using putty on the windows machine
 
-One responeded in this case :- *10.44.4.105*
+* Then logging into 'ca09-vta' ssh address
+
+* Then using if-connfig to see ip addresses of the h/w of ca09-vta
+* There were 2 other addresses on the ethernet that corresponded to ca09-vta:
+
+* The host PC (linux VM) tried to communicate with both the ip addresses (using ssh)
+
+The ip address that responeded in this case :- *10.44.4.105*
 The other ip address may also generally work (but it dint work in our case which maybe because of the firewalls in the intranet):- *192.168.2.99*
 
 Also, the RPC port address of the device in our case was : *9091*
