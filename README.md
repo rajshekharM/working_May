@@ -43,16 +43,19 @@ You should see two paths - one original python libraries and the other tvm/vta p
 
 #### Testing VTA simulator
 
-We run the example file (*test_benchmark_topi_conv2d.py*) installed in the VTA python packaghe or the one attached in the directory :
+We run the example file (*test_benchmark_topi_conv2d.py*) installed in the VTA python packaghe or the one attached in the directory **test_benchmark_topi_conv2d** :
 
 If the file is located in the tvm directory:
 
 __$ python <tvm root>/vta/tests/python/integration/test_benchmark_topi_conv2d.py__
    
 Once we run this , there are some GOPS that can be seen , when it is running with the host pc hardware : 1.5 ms GOPS for this test
+For every convolution layer, the throughput gets reported in GOPS. 
 
+Another example that we run on the VTA Simulator is the RESNET example :
+It is also included in the directory **RESNET**
 
-
+Another example that we run on the VTA Simulator is the Run a Youtube Video Image Classifier
 
 
 
