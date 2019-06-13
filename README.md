@@ -24,18 +24,18 @@ in this case.
 
 * keep in mind the whole path is home/user/tvm... [while if one goes to the file location through linux GUI, it shows home/user/tvm... ] 
 
-$ export PYTHONPATH=/path/to/vta/python:${PYTHONPATH}
+__$ export PYTHONPATH=/path/to/vta/python:${PYTHONPATH}
 
 or 
 
-$ export PYTHONPATH="${PYTHONPATH}:/my/other/path"
+__$ export PYTHONPATH="${PYTHONPATH}:/my/other/path"
 
 
 __Comment__ : We add/append the new path to vta library in the tvm directory to your previous PYTHONPATH, so that the other python library files are also accesible !
 
 You can see the paths later by using :
 
-_$ echo $PYTHONPATH
+__$ echo $PYTHONPATH__
 
 You should see two paths - one original python libraries and the other tvm/vta path
 
@@ -57,10 +57,10 @@ You should see two paths - one original python libraries and the other tvm/vta p
 
 * The host PC (linux VM) tried to communicate with both the ip addresses (using ssh)
 
-The ip address that responeded in this case :- *10.44.4.105*
+The ip address that responeded in this case :- __*10.44.4.105*__
 
-The other ip address may also generally work (but it dint work in our case which maybe because of the firewalls in the intranet):- *192.168.2.99*
+The other ip address may also generally work (but it dint work in our case which maybe because of the firewalls in the intranet):- __*192.168.2.99*__
 
-Also, the RPC port address of the device in our case was : *9091*
+Also, the RPC port address of the device in our case was : __*9091*__
 
 
