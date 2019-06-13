@@ -1,9 +1,9 @@
 
-#To build TVM in Pynq :
+# To build TVM in Pynq :
 
 
 
-##First Test the VTA Simulator working in the TVM package :
+## First Test the VTA Simulator working in the TVM package :
 
 
 The VTA simulator library is built by default with TVM. 
@@ -20,24 +20,24 @@ rpc_client.py
 
 in this case.
 
-*keep in mind the whole path is home/user/tvm... [while if one goes to the file location through linux GUI, it shows home/user/tvm... ] 
+* keep in mind the whole path is home/user/tvm... [while if one goes to the file location through linux GUI, it shows home/user/tvm... ] *
 
-$export PYTHONPATH=/path/to/vta/python:${PYTHONPATH}
+$ export PYTHONPATH=/path/to/vta/python:${PYTHONPATH}
 
 or 
 
-$export PYTHONPATH="${PYTHONPATH}:/my/other/path"
+$ export PYTHONPATH="${PYTHONPATH}:/my/other/path"
 
 
 Comment : We add/append the new path to vta library in the tvm directory to your previous PYTHONPATH, so that the other python library files are also accesible !
 You can see the paths later by using :
 
-$echo $PYTHONPATH
+$ echo $PYTHONPATH
 
 you should see two paths - one original python libraries and the other tvm/vta path
 
 
-##Connect with VTA H/W i.i. xilinx Pynq FPGA Board
+## Connect with VTA H/W i.i. xilinx Pynq FPGA Board
 
 
 -  We use the host machine (in this case a Linux Virtual Machine running on a Windows machine), to first connect with pynq using ssh
