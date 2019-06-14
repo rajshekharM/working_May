@@ -136,13 +136,21 @@ This can be seen from the ip address itself or the INFO on command line once we 
 So on the Host Linux machien we do the following :
 
 #On Host Side
+
 #Replace mountpoint with new tvm directory in host PC, to be copied to pynbq board [in this case it was: home/raj/tvm]
+
 __$mkdir <mountpoint>__
+    
 __$sshfs xilinx@10.44.4.127:/home/xilinx <mountpoint>__
+    
 __$cd <mountpoint>__
+    
 __$git clone --recursive https://github.com/dmlc/tvm__
-# When finished, leave the moutpoint and unmount the directory
+
+#When finished, leave the moutpoint and unmount the directory
+
 __$cd ~__
+
 __$sudo unmount <mountpoint>__
     
 
