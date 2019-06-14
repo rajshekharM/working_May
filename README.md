@@ -154,6 +154,35 @@ __$cd ~__
 __$sudo unmount <mountpoint>__
     
 
+** Once the TVM repo has been cloned into Pynq's file system, we directly *ssh* into the pynq h/w and launch the build of the TVM-based RPC server.
+
+** One point - when building TVM as we want to target the Pynq FPGA platform. So here we need the *pynq_sample.json* file to be built rather than the *vta_config.json* default, which targets the VTA simulator on host pc. So we replace the content of vta_config.json file with pynq_sample.json file , in the tvm drectory.
+
+__ssh xilinx@10.44.4.127
+
+__#Build TVM runtime library in pynq h/w (would take 5 mins)
+
+__cd /home/xilinx/tvm
+
+__mkdir build
+
+cp cmake/config.cmake build/.
+
+# Copy pynq specific configuration
+
+cp vta/config/pynq_sample.json build/vta_config.json
+
+cd build
+
+cmake ..
+
+make runtime vta -j2
+
+# Build VTA RPC server (takes 1 min)
+
+cd ..
+
+__sudo ./apps/pynq_rpc/start_rpc_server.sh # pw is 'xilinx'
 
 
 
