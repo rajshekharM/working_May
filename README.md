@@ -141,7 +141,7 @@ So on the Host Linux machien we do the following :
 
 __$mkdir <mountpoint>__
     
-__$sshfs xilinx@10.44.4.127:/home/xilinx <mountpoint>__
+__$sshfs xilinx@10.44.4.105:/home/xilinx <mountpoint>__
     
 __$cd <mountpoint>__
     
@@ -199,24 +199,46 @@ If the *ssh* session is not responding, check that the ip address is static and 
 
 ### Testing your Pynq-based Hardware Setup
 
+-- As the RPC session is running in one terminal, open another terminal to configure and run the scripts on vta 
+
 Before running the examples on your development machine, you’ll need to configure your host environment as follows:
 
 #On the Host-side
 
 __$export VTA_PYNQ_RPC_HOST=10.44.4.105__
+
 __$export VTA_PYNQ_RPC_PORT=9091__
 
+-- In addition, one will need to edit the *vta_config.json* file on the host to indicate that we are targeting the Pynq platform, by setting the TARGET field to "pynq". 
+-- Alternatively, one can copy the default *vta/config/pynq_sample.json* into the TVM root as *vta_config.json*.
+
+# On the Host-side
+
+__$cd <tvm root>__
+    
+__$cp vta/config/pynq_sample.json vta_config.json__
 
 
+# On the Host-side
+
+__$python <tvm root>/vta/tests/python/pynq/test_program_rpc.py__
+
+-- *You can track progress of the FPGA programming and the runtime rebuilding steps by looking at the RPC server’s logging messages in your Pynq ssh session opened in another terminal*
 
 
+Now we run the 2D convolution test program :
 
+# On the Host-side
+__$python <tvm root>/vta/tests/python/integration/test_benchmark_topi_conv2d.py__
 
+**We observe the GOPS is way slower than the prevous time when executed on VTA sim which used the host pc h/w
+This one is using the Pynq's FPGA h/w** 
 
-
-
-
-
+In our case the GOPS were variable :
+- 1.00 
+- 13.00
+- 3.17
+- 19.07
 
 
 
