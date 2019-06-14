@@ -212,14 +212,14 @@ __$export VTA_PYNQ_RPC_PORT=9091__
 -- In addition, one will need to edit the *vta_config.json* file on the host to indicate that we are targeting the Pynq platform, by setting the TARGET field to "pynq". 
 -- Alternatively, one can copy the default *vta/config/pynq_sample.json* into the TVM root as *vta_config.json*.
 
-# On the Host-side
+#On the Host-side
 
 __$cd <tvm root>__
     
 __$cp vta/config/pynq_sample.json vta_config.json__
 
 
-# On the Host-side
+#On the Host-side
 
 __$python <tvm root>/vta/tests/python/pynq/test_program_rpc.py__
 
@@ -228,7 +228,7 @@ __$python <tvm root>/vta/tests/python/pynq/test_program_rpc.py__
 
 Now we run the 2D convolution test program :
 
-# On the Host-side
+#On the Host-side
 __$python <tvm root>/vta/tests/python/integration/test_benchmark_topi_conv2d.py__
 
 **We observe the GOPS is way slower than the prevous time when executed on VTA sim which used the host pc h/w
