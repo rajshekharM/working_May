@@ -158,7 +158,8 @@ __$sudo unmount <mountpoint>__
 
 ** One point - when building TVM as we want to target the Pynq FPGA platform. So here we need the *pynq_sample.json* file to be built rather than the *vta_config.json* default, which targets the VTA simulator on host pc. So we replace the content of vta_config.json file with pynq_sample.json file , in the tvm drectory.
 
-__ssh xilinx@10.44.4.127__
+#On host PC , to go directly into pynq FPGA, use ssh :
+__ssh xilinx@10.44.4.105__
 
 __#Build TVM runtime library in pynq h/w (would take 5 mins)__
 
