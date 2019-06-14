@@ -66,8 +66,11 @@ In our case, we did not modify the vta_config.json file as it was working for th
 But if it is needed, one can follow the steps:
 
 __$ cd <tvm root>__
+    
 __$ cp vta/config/vta_config.json vta_config.json__
-# edit vta_config.json
+
+#edit vta_config.json
+
 __$make vta__
 
 ## VTA Pynq-Based Test Setup
