@@ -240,6 +240,13 @@ In our case the GOPS were variable :
 - 3.17
 - 19.07
 
+Some of the other VTA Tutorials run were :
+
+1. RESNET 
+2. get_started
+3. Youtube frame classifier
+
+All examples are in the *home/user/tvm/vta* folder in the Pynq h/w
 
 
 
