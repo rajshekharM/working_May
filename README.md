@@ -39,7 +39,9 @@ You can see the paths later by using :
 
 __$ echo $PYTHONPATH__
 
-You should see two paths - one original python libraries and the other tvm/vta path
+You should see two paths - one original python libraries and the other tvm/vta path. 
+Sometimes it might return one path as blank space [that is also ok, in case of environments]. 
+*If you don't have any particular path set in your .profile or .bashrc file (or locally), the variable will be empty.*
 
 #### Testing VTA simulator
 
