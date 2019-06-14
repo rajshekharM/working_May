@@ -251,7 +251,7 @@ Some of the other VTA Tutorials run were :
 2. get_started
 3. Youtube frame classifier
 
-All examples are in the *home/user/tvm/vta* folder in the Pynq h/w
+All examples are in the *home/user/tvm/vta* folder and also included with the repo in subfolders
 
 
 
