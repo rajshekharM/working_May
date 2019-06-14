@@ -163,31 +163,32 @@ __ssh xilinx@10.44.4.105__
 
 __#Build TVM runtime library in pynq h/w (would take 5 mins)__
 
-__cd /home/xilinx/tvm__
+__$cd /home/xilinx/tvm__
 
-__mkdir build__
+__$mkdir build__
 
-__cp cmake/config.cmake build/.__
+__$cp cmake/config.cmake build/.__
 
 __#Copy pynq specific configuration__
 
-__cp vta/config/pynq_sample.json build/vta_config.json__
+__$cp vta/config/pynq_sample.json build/vta_config.json__
 
-__cd build__
+__$cd build__
 
-__cmake ..__
+__$cmake ..__
 
-__make runtime vta -j2__
+__$make runtime vta -j2__
 
 __#Build VTA RPC server (takes 1 min)__
 
-__cd ..__
+__$cd ..__
 
-__sudo ./apps/pynq_rpc/start_rpc_server.sh # pw is 'xilinx'__
+__$sudo ./apps/pynq_rpc/start_rpc_server.sh # pw is 'xilinx'__
 
+##Mention: If one is not in the tvm directory here, then locate to the full address of *start_rpc_server.sh* inside the tvm directory instead of  ./apps/pynq_rpc/start_rpc_server.sh
 Once we have started(built and deployed) the RPC server session in the pynq h/w, we should see the following on the command window :
 
-__xilinx@pynq$INFO:root:RPCServer: bind to 0.0.0.0:9091__
+__INFO:root:RPCServer: bind to 0.0.0.0:9091__
 
 
 
