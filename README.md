@@ -190,8 +190,21 @@ Once we have started(built and deployed) the RPC server session in the pynq h/w,
 
 __INFO:root:RPCServer: bind to 0.0.0.0:9091__
 
+Also the 9091 is the RPC Port number that will be used later
+
+One can re-run the RPC server session if something is not working
+
+If the *ssh* session is not responding, check that the ip address is static and same as before using the putty session.
 
 
+### Testing your Pynq-based Hardware Setup
+
+Before running the examples on your development machine, you’ll need to configure your host environment as follows:
+
+#On the Host-side
+
+__$export VTA_PYNQ_RPC_HOST=10.44.4.105__
+__$export VTA_PYNQ_RPC_PORT=9091__
 
 
 
